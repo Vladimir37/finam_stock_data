@@ -1,0 +1,1 @@
+from finam_stock_data import get_data

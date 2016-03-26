@@ -26,7 +26,6 @@ def get_data(start_date, end_date, period, symbol_code):
     period = periods[period]
 
     url_addr = 'http://195.128.78.52/table.csv?'
-    url = "http://195.128.78.52/table.csv?market=5&em=86&code=GBPUSD&df=1&mf=11&yf=2014&from=01.12.2014&dt=6&mt=11&yt=2014&to=06.12.2014&p=2&e=.csv&cn=GBPUSD&dtf=1&tmf=3&MSOR=1&mstime=on&mstimever=1&sep=3&sep2=1&datf=5&at=1"
 
     # symbol data from database
     connect = sqlite3.connect('symbols.sqlite')
@@ -49,15 +48,11 @@ def get_data(start_date, end_date, period, symbol_code):
                  ('sep', 3), ('sep2', 1), ('datf', 5), ('at', 1)
                                      ])
 
-    # requestint
+    # requesting
     data = read_csv(url_addr + params, header=0, index_col=0, parse_dates={'Date&Time': [0, 1]}, sep=';').sort_index()
     data.columns = ['' + i for i in ['Open', 'High', 'Low', 'Close', 'Volume']]
 
     set_option('display.max_columns', 50)
     set_option('display.width', 500)
 
-    # table = data.head(5).to_dict()['Open'][pandas.to_datetime('2014-12-01 00:01:00')]
-    print(data.to_json())
-
-
-qw = get_data(1352678400, 1352937600, 'daily','MSFT')
+    return data.to_json()
