@@ -33,30 +33,30 @@ get_data(1352678400, 1352937600, 'hour','MSFT')
 Function `get_data` return JSON string. JSON has the following structure:
 ```json
 {
-  'Open': {
-    'date_1': 'value_1',
-    'date_2': 'value_2',
-    'date_3': 'value_3'
+  "Open": {
+    "date_1": "value_1",
+    "date_2": "value_2",
+    "date_3": "value_3"
   },
-  'High': {
-    'date_1': 'value_1',
-    'date_2': 'value_2',
-    'date_3': 'value_3'
+  "High": {
+    "date_1": "value_1",
+    "date_2": "value_2",
+    "date_3": "value_3"
   },
-  'Low': {
-    'date_1': 'value_1',
-    'date_2': 'value_2',
-    'date_3': 'value_3'
+  "Low": {
+    "date_1": "value_1",
+    "date_2": "value_2",
+    "date_3": "value_3"
   },
-  'Close': {
-    'date_1': 'value_1',
-    'date_2': 'value_2',
-    'date_3': 'value_3'
+  "Close": {
+    "date_1": "value_1",
+    "date_2": "value_2",
+    "date_3": "value_3"
   },
-  'Volume': {
-    'date_1': 'value_1',
-    'date_2': 'value_2',
-    'date_3': 'value_3'
+  "Volume": {
+    "date_1": "value_1",
+    "date_2": "value_2",
+    "date_3": "value_3"
   }
 }
 ```
