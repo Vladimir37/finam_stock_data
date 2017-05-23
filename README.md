@@ -17,7 +17,7 @@ from finam_stock_data import get_data
 ```
 Function calling:
 ```python
-get_data(start_date, end_date, period, symbol_code):
+get_data(start_date, end_date, period, symbol_code)
 ```
 Arguments:
 * **start_date** - first day in UTS. Example: **1352678400**
